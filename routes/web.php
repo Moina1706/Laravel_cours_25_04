@@ -18,5 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/livres', [LivreController::class, 'getAll']);
+Route::get('/livres', [LivreController::class, 'getAll'])->name('livres');
 Route::get('/livres/{id}', [LivreController::class, 'get']);
+Route::post('/livres', [LivreController::class, 'add']);
